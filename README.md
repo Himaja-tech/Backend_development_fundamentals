@@ -4,25 +4,53 @@
 ## Student Details
 - Name: Himaja
 - Registration Number: A.Himaja
-- Section: CSE GAI-
+- Section: CSE GAI-2A
+- Course: Backend Development Fundamentals
+- Lab Number: 01
 
 ## Live Link
-Not deployed yet.
+
 
 ## Objective
 To create a Node.js HTTP server and an Express server with multiple routes.
 
 ## Technologies Used
+
 - Node.js
 - Express.js
 - JavaScript
 - npm
+- Visual Studio Code
 
-## How to Run
+## Project Structure
 
-1. Install Node.js.
-2. Open the terminal in this folder.
-3. Install dependencies:
+```text
+lab-01/
+├── screenshots/
+│   ├── home.png
+│   ├── about.png
+│   ├── time.png
+│   └── not-found.png
+├── server-http.js
+├── server.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+## Installation and Setup
+
+### Prerequisites
+
+- Node.js and npm installed
+- Visual Studio Code or another code editor
+
+### Steps to Run
+
+1. Clone the repository or download the project.
+2. Open the `lab-01` folder in the terminal.
+3. Install the dependencies:
 
    ```bash
    npm install
@@ -34,34 +62,78 @@ To create a Node.js HTTP server and an Express server with multiple routes.
    node server.js
    ```
 
-5. Open http://localhost:3000 in your browser.
+5. Open the following URL in your browser:
+
+   `http://localhost:3000`
+
+### Run the Basic HTTP Server
+
+To run the server implemented using Node.js's built-in HTTP module:
+
+```bash
+node server-http.js
+```
+
+Stop the running server with `Ctrl + C` before starting another server on the same port.
 
 ## Endpoints
 
-| Method | Path | Description | Status Code |
+| Method | Endpoint | Description | Expected Status |
 |---|---|---|---|
-| GET | / | Welcome message | 200 |
-| GET | /about | Displays name and section | 200 |
-| GET | /time | Displays current date and time | 200 |
-| GET | /anything | Handles unknown routes | 404 |
+| GET | `/` | Returns a welcome message | 200 OK |
+| GET | `/about` | Returns the student's name and section as JSON | 200 OK |
+| GET | `/time` | Returns the current date and time | 200 OK |
+| GET | `/anything` | Demonstrates the response for an unknown route | 404 Not Found |
+
+The `/anything` path is an example of an unknown route. Other undefined paths should also return a 404 response.
 
 ## Screenshots
 
 ### Home Route
+Displays the hello message.
 ![Home route](screenshots/home.png)
 
 ### Welcome Route
+Displays the welcome message.
 ![Welcome route](screenshots/welcome.png)
 
 ### About Route
+Displays the student's name and section in JSON format.
 ![About route](screenshots/about.png)
 
 ### Time Route
+Displays the current date and time.
 ![Time route](screenshots/time.png)
 
 ### 404 Route
+Displays the 404 Page Not Found response.
 ![404 route](screenshots/not-found.png)
 
+## HTTP Status Codes
+- **200 OK:** The request was successful.
+- **404 Not Found:** The requested route does not exist.
+
+## Viva Questions
+
+### 1. What is the difference between `package.json` and `node_modules`?
+
+`package.json` stores project metadata, scripts, and dependency information. `node_modules` contains the installed packages required by the project.
+
+### 2. What does `app.listen()` do?
+
+`app.listen()` starts the Express server and makes it listen for incoming requests on a specified port.
+
+### 3. What do `request` and `response` represent?
+
+`request` contains information about the incoming HTTP request. `response` is used to send data and status codes back to the client.
+
 ## Problems Faced and Solutions
-I learned how to create a Node.js server and an Express server,
-define routes, and return the correct HTTP status codes.
+The server did not start because the port was already in use, so I stopped the existing server and restarted the application.
+
+## Git and Repository Notes
+
+- The `.gitignore` file excludes `node_modules/` and `.env`.
+- The `node_modules/` directory must not be committed.
+- Screenshots are stored in the `screenshots/` directory.
+- The project is submitted through the course GitHub repository.
+
