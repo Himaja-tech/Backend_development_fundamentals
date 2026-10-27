@@ -2,8 +2,8 @@
 # Lab 1: Node.js and Express server
 
 ## Student Details
-- Name: Himaja
-- Registration Number: A.Himaja
+- Name: A.Himaja
+- Registration Number: 252U1R9008
 - Section: CSE GAI-2A
 - Course: Backend Development Fundamentals
 - Lab Number: 01
@@ -25,18 +25,19 @@ To create a Node.js HTTP server and an Express server with multiple routes.
 ## Project Structure
 
 ```text
-lab-01/
-├── screenshots/
-│   ├── home.png
+lab_01/
+├── Screenshots/
 │   ├── about.png
+│   ├── home.png
+│   ├── not-found.png
 │   ├── time.png
-│   └── not-found.png
-├── server-http.js
-├── server.js
+│   └── welcome.png
+├── .gitignore
 ├── package.json
 ├── package-lock.json
-├── .gitignore
-└── README.md
+├── README.md
+├── server-http.js
+└── server.js
 ```
 
 ## Installation and Setup
